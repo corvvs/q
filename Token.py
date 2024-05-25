@@ -1,4 +1,4 @@
-from qiskit_ibm_runtime import QiskitRuntimeService, Session, Sampler
+from qiskit_ibm_runtime import QiskitRuntimeService
 
 token_file = ".token"
 with open(token_file, "r") as f:
