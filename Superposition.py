@@ -14,7 +14,8 @@ result = job.result()
 
 counts = result.get_counts() # 古典ビット#0 の状態がそれぞれ0/1だった回数を辞書で返す
 # print("Counts:", counts)
-counts['0'] /= float(shot_count)
-counts['1'] /= float(shot_count)
+# Normalize
+for k, v in counts.items():
+	counts[k] = v / float(shot_count)
 plot_histogram(counts).show()
 plt.show()
